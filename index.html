@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wildlife Rescue Alliance</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p6eRwE0p2tbhGqfiKnj89y77ulGgnIY7qDpiRnwV0wOYAV/QXp1Zl8vLwawx2UY8ailqXF/w3vY9VOGOrJeWUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Accessibility control buttons -->
+  <div class="accessibility-controls" aria-label="Accessibility controls">
+    <button id="increase-font" title="Increase text size" aria-label="Increase text size"><i class="fas fa-plus"></i></button>
+    <button id="decrease-font" title="Decrease text size" aria-label="Decrease text size"><i class="fas fa-minus"></i></button>
+    <button id="toggle-dark-mode" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+  </div>
+
+  <header>
+    <h1>Wildlife Rescue Alliance</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="stories.html">Stories</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <!-- Highlight the donate link with a button style -->
+        <li><a href="donate.html" class="donate-btn">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Building Stronger Communities Together</h2>
+      <p>Join us in empowering people and improving lives through service and support.</p>
+      <a href="about.html" class="button">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Wildlife rescue gallery section -->
+  <section class="section gallery-section">
+    <h2>Wildlife Rescue in Action</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="images/rescue_bird.jpg" alt="Feeding a baby bird at a wildlife rehabilitation center">
+        <div class="caption">Rehabilitators carefully feed an injured songbird, giving it a second chance at life.</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/pelican_release.jpg" alt="Pelican being released back into the wild after rehabilitation">
+        <div class="caption">After weeks of care, a rescued pelican spreads its wings and returns to the wild.</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/seal_flight.jpg" alt="Rescued seals being flown to a marine sanctuary">
+        <div class="caption">Coast Guard crews transport rehabilitated seals to a safe marine sanctuary.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Our Mission</h2>
+    <p>
+      We rescue and rehabilitate injured and orphaned wildlife, educate our
+      communities about conservation and nurture habitats where nature can
+      thrive.  By connecting compassionate people with resources and
+      opportunities, we create a brighter future for animals and humans alike.
+    </p>
+    <p>
+      Our programs focus on wildlife rescue, community education and habitat
+      restoration.  By bringing together volunteers, partners and donors, we
+      facilitate projects that heal animals, inspire environmental stewardship
+      and regenerate ecosystems.
+    </p>
+  </section>
+
+  <!-- Programs section highlighting our core initiatives -->
+  <section class="section programs-section">
+    <h2>Our Programs</h2>
+    <div class="programs-grid">
+      <div class="program-card">
+        <div class="icon">
+          <!-- Paw print icon to represent wildlife rescue -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="40" fill="#00a859" aria-hidden="true">
+            <path d="M136.2 224c-22.3 0-40.4 18.1-40.4 40.4s18.1 40.4 40.4 40.4 40.4-18.1 40.4-40.4-18.1-40.4-40.4-40.4zm239.5 0c-22.3 0-40.4 18.1-40.4 40.4s18.1 40.4 40.4 40.4 40.4-18.1 40.4-40.4-18.1-40.4-40.4-40.4zM170 108c-28.3 0-51.2 22.9-51.2 51.2s22.9 51.2 51.2 51.2 51.2-22.9 51.2-51.2S198.3 108 170 108zm172 0c-28.3 0-51.2 22.9-51.2 51.2s22.9 51.2 51.2 51.2 51.2-22.9 51.2-51.2S370.3 108 342 108zM256 260c-32.5 0-98.9 25.7-98.9 98.9 0 25.2 20.4 45.8 45.8 45.8 25.1 0 45.7-20.5 45.7-45.8h5c0 25.3 20.5 45.8 45.7 45.8 25.4 0 45.8-20.6 45.8-45.8-.1-73.2-66.5-98.9-98.9-98.9z"/>
+          </svg>
+        </div>
+        <h3>Wildlife Rescue</h3>
+        <p>Our trained volunteers rescue injured and orphaned wildlife, providing medical care and rehabilitation until they are ready for release.</p>
+      </div>
+      <div class="program-card">
+        <div class="icon">
+          <!-- Book icon to represent community education -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="40" height="40" fill="#00a859" aria-hidden="true">
+            <path d="M96 0C60.7 0 32 28.7 32 64v384c0 8.8 7.2 16 16 16h16c0-53 43-96 96-96h208V96c0-53-43-96-96-96H96z"/>
+          </svg>
+        </div>
+        <h3>Community Education</h3>
+        <p>We offer workshops and outreach programs to educate the public about conservation, animal welfare and environmental stewardship.</p>
+      </div>
+      <div class="program-card">
+        <div class="icon">
+          <!-- Leaf/tree icon to represent habitat restoration -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="40" height="40" fill="#00a859" aria-hidden="true">
+            <path d="M96 0C60.7 0 32 28.7 32 64v384c0 17.7 14.3 32 32 32h224c17.7 0 32-14.3 32-32V160c0-8.8-7.2-16-16-16H192V64c0-35.3-28.7-64-64-64H96z"/>
+          </svg>
+        </div>
+        <h3>Habitat Restoration</h3>
+        <p>Through tree planting, cleanup initiatives and community projects, we restore vital habitats and create safe spaces for wildlife to thrive.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact section with animated counters -->
+  <section class="section impact-section">
+    <h2>Our Impact</h2>
+    <div class="counter-container">
+      <div>
+        <div class="counter" data-target="1200">0</div>
+        <div class="counter-description">Volunteers mobilized</div>
+      </div>
+      <div>
+        <div class="counter" data-target="6500">0</div>
+        <div class="counter-description">Lives touched</div>
+      </div>
+      <div>
+        <div class="counter" data-target="300">0</div>
+        <div class="counter-description">Projects completed</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials section sharing volunteer and supporter voices -->
+  <section class="testimonials-section">
+    <h2>What People Are Saying</h2>
+    <div class="testimonial">
+      <p>“Volunteering with this organization has been an unforgettable experience. Knowing I’m helping injured animals heal and return to the wild fills my heart with purpose.”</p>
+      <cite>— Sarah, Volunteer</cite>
+    </div>
+    <div class="testimonial">
+      <p>“My children learned so much from the community education workshop. It inspired them to care for the environment and be mindful stewards of nature.”</p>
+      <cite>— David, Parent</cite>
+    </div>
+    <div class="testimonial">
+      <p>“Thanks to the habitat restoration project, our local park has transformed into a thriving oasis for birds and pollinators. I’m proud to support this cause.”</p>
+      <cite>— Maria, Donor</cite>
+    </div>
+  </section>
+
+  <!-- Get involved section with clear calls to action -->
+  <section class="section">
+    <h2>Get Involved</h2>
+    <p>
+      Whether through volunteering, donating or spreading the word, you can help us
+      make a difference. Your support matters. Strategically placed calls to action encourage engagement and convert visitors into volunteers and donors.
+    </p>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 10px;">
+      <a href="volunteer.html" class="button" style="min-width: 150px; text-align: center;">Volunteer</a>
+      <a href="donate.html" class="button" style="min-width: 150px; text-align: center;">Donate</a>
+    </div>
+  </section>
+
+  <!-- Newsletter sign‑up -->
+  <section class="section" id="newsletter">
+    <h2>Join Our Newsletter</h2>
+    <p>Stay up to date with our latest rescue stories, events and volunteer opportunities. Enter your email below to subscribe.</p>
+    <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!');" style="max-width: 500px; margin: 0 auto;">
+      <input type="email" name="newsletterEmail" placeholder="Enter your email" required style="margin-bottom: 10px;" />
+      <button type="submit" class="button">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Image credits section -->
+  <section class="section" style="padding-top: 10px; padding-bottom: 10px;">
+    <p style="font-size: 0.8rem; color: #666; text-align: center; max-width: 800px; margin: 0 auto;">
+      <strong>Image credits:</strong> The bird feeding photo by Tomitheos is licensed under CC&nbsp;BY&nbsp;2.0; the pelican release photo is by the U.S. Fish and Wildlife Service and licensed under CC&nbsp;BY&nbsp;2.0; the seal transport photo is a U.S. Coast Guard work in the public domain.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Wildlife Rescue Alliance. All rights reserved.</p>
+    <p class="footer-icons" style="margin-top: 10px; font-size: 1.4rem;">
+      <!-- Social media icons using Font Awesome -->
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </p>
+  </footer>
+
+  <!-- Animate counters on page load -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('.counter');
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'), 10);
+        let count = 0;
+        const step = Math.max(1, Math.floor(target / 200));
+        function update() {
+          count += step;
+          if (count < target) {
+            counter.textContent = count.toLocaleString();
+            requestAnimationFrame(update);
+          } else {
+            counter.textContent = target.toLocaleString();
+          }
+        }
+        update();
+      });
+
+      /* Hero image slideshow: cycle through a set of background images on the
+         hero section every few seconds. The images array contains relative
+         paths to pictures stored in the images folder. */
+      const hero = document.querySelector('.hero');
+      const heroImages = [
+        'images/volunteers_restoration.jpg',
+        'images/sea_turtle_release.jpg',
+        'images/pelican_release.jpg',
+        'images/baby_turtle_release.jpg',
+        'images/rescue_bird.jpg'
+      ];
+      let heroIndex = 0;
+      function changeHero() {
+        hero.style.backgroundImage = `url('${heroImages[heroIndex]}')`;
+        heroIndex = (heroIndex + 1) % heroImages.length;
+      }
+      changeHero();
+      setInterval(changeHero, 8000);
+
+      /* Accessibility controls: increase/decrease font size and toggle dark
+         mode. Adjust the root font size and apply/remove the dark-mode class
+         when users interact with the buttons. */
+      let baseFontSize = 16;
+      const increaseBtn = document.getElementById('increase-font');
+      const decreaseBtn = document.getElementById('decrease-font');
+      const darkModeBtn = document.getElementById('toggle-dark-mode');
+      increaseBtn.addEventListener('click', () => {
+        if (baseFontSize < 22) {
+          baseFontSize += 1;
+          document.documentElement.style.fontSize = baseFontSize + 'px';
+        }
+      });
+      decreaseBtn.addEventListener('click', () => {
+        if (baseFontSize > 12) {
+          baseFontSize -= 1;
+          document.documentElement.style.fontSize = baseFontSize + 'px';
+        }
+      });
+      darkModeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        // Update the icon to reflect current mode
+        if (document.body.classList.contains('dark-mode')) {
+          darkModeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+          darkModeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

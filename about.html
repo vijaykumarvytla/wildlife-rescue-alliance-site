@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – Wildlife Rescue Alliance</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p6eRwE0p2tbhGqfiKnj89y77ulGgnIY7qDpiRnwV0wOYAV/QXp1Zl8vLwawx2UY8ailqXF/w3vY9VOGOrJeWUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Accessibility control buttons -->
+  <div class="accessibility-controls" aria-label="Accessibility controls">
+    <button id="increase-font" title="Increase text size" aria-label="Increase text size"><i class="fas fa-plus"></i></button>
+    <button id="decrease-font" title="Decrease text size" aria-label="Decrease text size"><i class="fas fa-minus"></i></button>
+    <button id="toggle-dark-mode" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+  </div>
+  <header>
+    <h1>Wildlife Rescue Alliance</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="stories.html">Stories</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="donate.html" class="donate-btn">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page hero for About page -->
+  <section class="page-hero" style="background-image: url('images/volunteers_restoration.jpg');">
+    <div>
+      <h2>About Wildlife Rescue Alliance</h2>
+      <p>Learn more about our mission, vision and the people who make our wildlife rescue work possible.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>About Us</h2>
+    <p>
+      Wildlife Rescue Alliance is a grassroots nonprofit dedicated to protecting
+      wildlife and educating communities about conservation. Founded in 2025, we
+      rescue and rehabilitate injured and orphaned animals, inspire stewardship
+      through educational programs, and restore habitats for future generations.
+    </p>
+    <p>
+      Our programs focus on wildlife rescue, community education and habitat
+      restoration. We provide opportunities for individuals to contribute their
+      time, skills and resources to make a positive difference for animals and
+      the environment.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Our Mission &amp; Vision</h2>
+    <p><strong>Mission:</strong> To protect and rehabilitate wildlife while empowering people to nurture and restore natural habitats.</p>
+    <p><strong>Vision:</strong> A world where wildlife thrives and communities live in harmony with nature.</p>
+  </section>
+
+  <section class="section">
+    <h2>Our Values</h2>
+    <ul>
+      <li><strong>Community:</strong> We believe in the strength of people working together.</li>
+      <li><strong>Empowerment:</strong> We support individuals to realise their potential.</li>
+      <li><strong>Transparency:</strong> We are open and accountable in all we do.</li>
+      <li><strong>Compassion:</strong> We approach every person with empathy and respect.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Wildlife Rescue Alliance. All rights reserved.</p>
+    <p class="footer-icons" style="margin-top: 10px; font-size: 1.4rem;">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </p>
+  </footer>
+
+  <!-- Scripts for accessibility controls -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let baseFontSize = 16;
+      const increaseBtn = document.getElementById('increase-font');
+      const decreaseBtn = document.getElementById('decrease-font');
+      const darkModeBtn = document.getElementById('toggle-dark-mode');
+      increaseBtn.addEventListener('click', () => {
+        if (baseFontSize < 22) {
+          baseFontSize += 1;
+          document.documentElement.style.fontSize = baseFontSize + 'px';
+        }
+      });
+      decreaseBtn.addEventListener('click', () => {
+        if (baseFontSize > 12) {
+          baseFontSize -= 1;
+          document.documentElement.style.fontSize = baseFontSize + 'px';
+        }
+      });
+      darkModeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+          darkModeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+          darkModeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

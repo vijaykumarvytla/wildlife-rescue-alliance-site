@@ -1,0 +1,721 @@
+/* Main stylesheet for the nonprofit website */
+
+/* Reset some default margins/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Use a modern sans‑serif font for a more polished look. If Google Fonts are
+     available, the @import rule below will load the Poppins typeface. */
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  /* We set a base font size on the document root to allow easy scaling for
+     accessibility. JavaScript will adjust this value via inline styles when
+     users click the A+ or A− buttons in the header. */
+  font-size: 16px;
+}
+
+/* Import Google Font (Poppins). Browsers that cannot fetch this file will
+   gracefully fall back to system fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+header {
+  background-color: #1f4e79;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+nav ul li a.active {
+  border-bottom: 2px solid #00a859;
+}
+
+/* Highlight the Donate button in the navigation */
+nav ul li a.donate-btn {
+  background-color: #00a859;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+nav ul li a.donate-btn:hover {
+  background-color: #008f4c;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  height: 60vh;
+  /* Use a real-life hero image depicting volunteers restoring habitat to convey authenticity. */
+  /* The background image is set dynamically via JavaScript to create a
+     slideshow effect. A fallback image is defined here for browsers with
+     JavaScript disabled. */
+  background-image: url('images/volunteers_restoration.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 80%;
+}
+
+/* A smaller hero style used on sub‑pages like Success Stories */
+.page-hero {
+  position: relative;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.page-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero p {
+  font-size: 1.1rem;
+  max-width: 70%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Success story layout */
+.story {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.story img {
+  width: 40%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.story-content {
+  flex: 1;
+  min-width: 240px;
+}
+
+.story-content h3 {
+  color: #1f4e79;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.story-content p {
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #00a859;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #008f4c;
+}
+
+/* Form input styling for the contact page */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  margin-top: 4px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #1f4e79;
+  box-shadow: 0 0 2px rgba(31, 78, 121, 0.3);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.section {
+  padding: 40px 20px;
+}
+
+.section:nth-of-type(even) {
+  background-color: #f5f5f5;
+}
+
+.section h2 {
+  color: #1f4e79;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.section p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.section ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+.section ul li {
+  margin-bottom: 10px;
+}
+
+/* Programs grid */
+.programs-section h2 {
+  color: #1f4e79;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.program-card {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.program-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.program-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #1f4e79;
+}
+
+.program-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Events grid styling – similar to programs but with date badges */
+.events-section h2 {
+  color: #1f4e79;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.event-card {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  padding: 30px 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-card .date {
+  font-weight: 600;
+  color: #00a859;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+.event-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #1f4e79;
+}
+
+.event-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.event-card .button {
+  align-self: start;
+  margin-top: auto;
+}
+
+/* News/blog post styles */
+.news-section h2 {
+  color: #1f4e79;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.post-card {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.post-card-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #1f4e79;
+}
+
+.post-card-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.post-card-content a {
+  color: #00a859;
+  text-decoration: underline;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+/* Stories library styles */
+.stories-section h2 {
+  color: #1f4e79;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.story-card {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.story-card-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-card-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #1f4e79;
+}
+
+.story-card-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.story-card-content a {
+  color: #00a859;
+  text-decoration: underline;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+/* Dark mode adjustments for cards */
+body.dark-mode .event-card,
+body.dark-mode .post-card {
+  background-color: #1f1f1f;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Counter styles */
+.impact-section h2 {
+  color: #1f4e79;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.counter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.counter {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #00a859;
+  text-align: center;
+}
+
+.counter-description {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Testimonials styles */
+.testimonials-section {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+}
+
+.testimonials-section h2 {
+  color: #1f4e79;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.testimonial {
+  background-color: #fff;
+  border-left: 4px solid #00a859;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial p {
+  margin-bottom: 10px;
+  font-style: italic;
+  color: #333;
+}
+
+.testimonial cite {
+  font-weight: bold;
+  color: #1f4e79;
+}
+
+footer {
+  background-color: #1f4e79;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Accessibility controls appear in the top-right of the page. They
+   remain unobtrusive but visible for users who wish to adjust the text
+   size or toggle dark mode. */
+.accessibility-controls {
+  display: flex;
+  gap: 10px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+.accessibility-controls button {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 4px;
+  padding: 6px 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #1f4e79;
+  transition: background-color 0.2s ease;
+}
+
+.accessibility-controls button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Dark mode styles for accessibility buttons */
+body.dark-mode .accessibility-controls button {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #00d27f;
+}
+
+body.dark-mode .accessibility-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Footer social icons */
+.footer-icons {
+  margin-top: 10px;
+}
+
+.footer-icons a {
+  color: #fff;
+  margin: 0 8px;
+  font-size: 1.4rem;
+  transition: color 0.2s ease;
+}
+
+.footer-icons a:hover {
+  color: #00a859;
+}
+
+/* Gallery styles */
+.gallery-section h2 {
+  color: #1f4e79;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+/* -------------------------------------------------------------------------
+   Accessibility and dark mode styles
+   These rules enable dark-mode support and adjustable font sizes. The
+   JavaScript toggles the `dark-mode` class on the body element when users
+   click the moon icon in the header, switching the colour scheme to a
+   high-contrast palette. The root font size is scaled via inline styles on
+   the html element when users click the A+ (increase) or A− (decrease) buttons.
+-------------------------------------------------------------------------- */
+
+/* Dark mode base colours */
+body.dark-mode {
+  background-color: #111;
+  color: #e5e5e5;
+}
+
+/* Header in dark mode */
+body.dark-mode header {
+  background-color: #0d2a48;
+  color: #fff;
+}
+
+/* Navigation links in dark mode */
+body.dark-mode nav ul li a {
+  color: #fff;
+}
+
+/* Active and hover states remain readable in dark mode */
+body.dark-mode nav ul li a.active,
+body.dark-mode nav ul li a:hover {
+  border-bottom: 2px solid #00d27f;
+}
+
+/* Donate button in dark mode */
+body.dark-mode nav ul li a.donate-btn {
+  background-color: #00d27f;
+  color: #fff;
+}
+
+body.dark-mode nav ul li a.donate-btn:hover {
+  background-color: #00b46a;
+}
+
+/* Sections alternate backgrounds differently in dark mode */
+body.dark-mode .section:nth-of-type(even) {
+  background-color: #1a1a1a;
+}
+
+/* Buttons maintain good contrast in dark mode */
+body.dark-mode .button {
+  background-color: #00d27f;
+  color: #111;
+}
+
+body.dark-mode .button:hover {
+  background-color: #00b46a;
+}
+
+/* Testimonials and cards adapt to dark backgrounds */
+body.dark-mode .program-card {
+  background-color: #1f1f1f;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .testimonial {
+  background-color: #1f1f1f;
+  border-left-color: #00d27f;
+}
+
+/* Footer colours in dark mode */
+body.dark-mode footer {
+  background-color: #0d2a48;
+  color: #e5e5e5;
+}
+
+body.dark-mode .footer-icons a {
+  color: #e5e5e5;
+}
+
+body.dark-mode .footer-icons a:hover {
+  color: #00d27f;
+}

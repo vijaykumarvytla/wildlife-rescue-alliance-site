@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News & Updates | Wildlife Rescue Alliance</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p6eRwE0p2tbhGqfiKnj89y77ulGgnIY7qDpiRnwV0wOYAV/QXp1Zl8vLwawx2UY8ailqXF/w3vY9VOGOrJeWUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Accessibility control buttons -->
+  <div class="accessibility-controls" aria-label="Accessibility controls">
+    <button id="increase-font" title="Increase text size" aria-label="Increase text size"><i class="fas fa-plus"></i></button>
+    <button id="decrease-font" title="Decrease text size" aria-label="Decrease text size"><i class="fas fa-minus"></i></button>
+    <button id="toggle-dark-mode" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+  </div>
+
+  <header>
+    <h1>Wildlife Rescue Alliance</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="stories.html">Stories</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="news.html" class="active">News</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="donate.html" class="donate-btn">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-hero" style="background-image: url('images/rescue_bird.jpg');">
+    <h2>News &amp; Updates</h2>
+    <p>Read inspiring stories, learn about recent rescues and stay informed about our impact.</p>
+  </section>
+
+  <section class="section news-section">
+    <h2>Latest Articles</h2>
+    <div class="news-grid">
+      <!-- Post 1 -->
+      <div class="post-card">
+        <img src="images/pelican_release.jpg" alt="Pelican release">
+        <div class="post-card-content">
+          <h3>Rescue Mission: Saving a Pelican</h3>
+          <p>Our team responded to an urgent call about an injured brown pelican. After weeks of rehabilitation, watch the heartwarming moment when it returned to the wild.</p>
+          <a href="success.html#pelican-story">Read more</a>
+        </div>
+      </div>
+      <!-- Post 2 -->
+      <div class="post-card">
+        <img src="images/volunteers_restoration.jpg" alt="Habitat restoration">
+        <div class="post-card-content">
+          <h3>Transforming a Park: Habitat Restoration</h3>
+          <p>Discover how volunteers came together to restore a degraded park into a flourishing habitat for birds and pollinators through our restoration program.</p>
+          <a href="success.html#habitat-story">Read more</a>
+        </div>
+      </div>
+      <!-- Post 3 -->
+      <div class="post-card">
+        <img src="images/rescue_bird.jpg" alt="Songbird feeding">
+        <div class="post-card-content">
+          <h3>The Power of Community Education</h3>
+          <p>Learn how our workshops empower people of all ages to protect wildlife and promote environmental stewardship in their own communities.</p>
+          <a href="about.html">Read more</a>
+        </div>
+      </div>
+      <!-- Post 4 -->
+      <div class="post-card">
+        <img src="images/sea_turtle_release.jpg" alt="Sea turtle release">
+        <div class="post-card-content">
+          <h3>Sea Turtle Released Back Home</h3>
+          <p>A stranded sea turtle, rescued and rehabilitated with the help of our partners, made its way back to the ocean. See how community support makes miracles happen.</p>
+          <a href="success.html#turtle-story">Read more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Wildlife Rescue Alliance. All rights reserved.</p>
+    <p class="footer-icons" style="margin-top: 10px; font-size: 1.4rem;">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </p>
+  </footer>
+
+  <!-- Scripts for accessibility controls -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let baseFontSize = 16;
+      const increaseBtn = document.getElementById('increase-font');
+      const decreaseBtn = document.getElementById('decrease-font');
+      const darkModeBtn = document.getElementById('toggle-dark-mode');
+      increaseBtn.addEventListener('click', () => {
+        if (baseFontSize < 22) {
+          baseFontSize += 1;
+          document.documentElement.style.fontSize = baseFontSize + 'px';
+        }
+      });
+      decreaseBtn.addEventListener('click', () => {
+        if (baseFontSize > 12) {
+          baseFontSize -= 1;
+          document.documentElement.style.fontSize = baseFontSize + 'px';
+        }
+      });
+      darkModeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+          darkModeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+          darkModeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
